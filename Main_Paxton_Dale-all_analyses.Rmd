@@ -32,7 +32,7 @@ Let's look at the location of maximum lags. If one or the other is leading, we w
 descriptives = descriptives[descriptives$maxrec>0,]
 
 # print it out
-pander(t.test(descriptives[descriptives$shuff=='observed',]$maxlag))
+pander(t.test(descriptives[descriptives$shuff=='observed',]$maxlag),style="rmarkdown")
 
 # plot interaction with satisfaction -- use PDF if we want to save as a file in a subdirectory
 # pdf(file='plots/interestvalidation_satisfaction.pdf',width=8,height=5.25)
@@ -46,12 +46,12 @@ source('plot_drps_age.R')
 
 # print model results using standardized and unstandardized coefficients
 source('lmer_stats.R')
-pander(coefs.simple) # simple (just lag terms): standardized
-pander(coefs.simple.raw) # simple (just lag terms): unstandardized
-pander(coefs.satisfaction) # lag terms and satisfaction: standardized
-pander(coefs.satisfaction.raw) # lag terms and satisfaction: unstandardized
-pander(coefs.age) # lag terms and age: standardized
-pander(coefs.age.raw) # lag terms and age: unstandardized
+pander(coefs.simple,style="rmarkdown") # simple (just lag terms): standardized
+pander(coefs.simple.raw,style="rmarkdown") # simple (just lag terms): unstandardized
+pander(coefs.satisfaction,style="rmarkdown") # lag terms and satisfaction: standardized
+pander(coefs.satisfaction.raw,style="rmarkdown") # lag terms and satisfaction: unstandardized
+pander(coefs.age,style="rmarkdown") # lag terms and age: standardized
+pander(coefs.age.raw,style="rmarkdown") # lag terms and age: unstandardized
 
 ```
 
@@ -74,7 +74,7 @@ source('get_rqa_measures.R')
 descriptives = descriptives[descriptives$maxrec>0,]
 
 # print it out
-pander(t.test(descriptives[descriptives$shuff=='observed',]$maxlag))
+pander(t.test(descriptives[descriptives$shuff=='observed',]$maxlag),style="rmarkdown")
 
 # plot interaction with satisfaction -- use PDF if we want to save as a file in a subdirectory
 # pdf(file='plots/negative_satisfaction.pdf',width=8,height=5.25)
@@ -88,12 +88,12 @@ source('plot_drps_age.R')
 
 # print model results using standardized and unstandardized ("raw") coefficients
 source('lmer_stats.R')
-pander(coefs.simple) # simple (just lag terms): standardized
-pander(coefs.simple.raw) # simple (just lag terms): unstandardized
-pander(coefs.satisfaction) # lag terms and satisfaction: standardized
-pander(coefs.satisfaction.raw) # lag terms and satisfaction: unstandardized
-pander(coefs.age) # lag terms and age: standardized
-pander(coefs.age.raw) # lag terms and age: unstandardized
+pander(coefs.simple,style="rmarkdown") # simple (just lag terms): standardized
+pander(coefs.simple.raw,style="rmarkdown") # simple (just lag terms): unstandardized
+pander(coefs.satisfaction,style="rmarkdown") # lag terms and satisfaction: standardized
+pander(coefs.satisfaction.raw,style="rmarkdown") # lag terms and satisfaction: unstandardized
+pander(coefs.age,style="rmarkdown") # lag terms and age: standardized
+pander(coefs.age.raw,style="rmarkdown") # lag terms and age: unstandardized
 ```
 
 Positive Emotion
@@ -114,7 +114,7 @@ source('get_rqa_measures.R')
 descriptives = descriptives[descriptives$maxrec>0,]
 
 # print it out
-pander(t.test(descriptives[descriptives$shuff=='observed',]$maxlag))
+pander(t.test(descriptives[descriptives$shuff=='observed',]$maxlag),style="rmarkdown")
 
 # plot interaction with satisfaction -- use PDF if we want to save as a file in a subdirectory
 # pdf(file='plots/positive_satisfaction.pdf',width=8,height=5.25)
@@ -128,12 +128,12 @@ source('plot_drps_age.R')
 
 # print model results using standardized and unstandardized ("raw") coefficients
 source('lmer_stats.R')
-pander(coefs.simple) # simple (just lag terms): standardized
-pander(coefs.simple.raw) # simple (just lag terms): unstandardized
-pander(coefs.satisfaction) # lag terms and satisfaction: standardized
-pander(coefs.satisfaction.raw) # lag terms and satisfaction: unstandardized
-pander(coefs.age) # lag terms and age: standardized
-pander(coefs.age.raw) # lag terms and age: unstandardized
+pander(coefs.simple,style="rmarkdown") # simple (just lag terms): standardized
+pander(coefs.simple.raw,style="rmarkdown") # simple (just lag terms): unstandardized
+pander(coefs.satisfaction,style="rmarkdown") # lag terms and satisfaction: standardized
+pander(coefs.satisfaction.raw,style="rmarkdown") # lag terms and satisfaction: unstandardized
+pander(coefs.age,style="rmarkdown") # lag terms and age: standardized
+pander(coefs.age.raw,style="rmarkdown") # lag terms and age: unstandardized
 ```
 
 Correlation between Dyad Satisfaction and Adolescent Age
@@ -145,6 +145,6 @@ Given systematic similarities between the age and satisfaction models, we checke
 
 # grab only one slice from each dyad
 corr_check = drps_raw[drps_raw$RawLag==0,]
-pander(cor.test(corr_check$Satisfaction,corr_check$Age))
+pander(cor.test(corr_check$Satisfaction,corr_check$Age),style="rmarkdown")
 
 ```
