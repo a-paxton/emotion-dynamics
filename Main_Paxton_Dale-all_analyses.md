@@ -661,6 +661,10 @@ pander(coefs.age.raw,style="rmarkdown") # lag terms and age: unstandardized
 |  **AgeF:LinearLag**  | 0.0009131  |   0.00126    |  0.7246   | 0.4687 |
 |   **AgeF:QuadLag**   |  0.001799  |   0.004353   |  0.4133   | 0.6794 |
 
+
+Correlation between Dyad Satisfaction and Adolescent Age
+------
+
 Given systematic similarities between the age and satisfaction models, we checked whether age and satisfaction correlate with one another.  As presented below, we do not find a reliable correlation between age and satisfaction variables.
 
 
