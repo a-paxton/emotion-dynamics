@@ -4,8 +4,6 @@ This repo contains the code for the analyses presented in our journal article, "
 
 To accompany the code, we also provide de-identified data for two dyads (contained in the `data` folder). We include the emotion time series for one low-satisfaction dyad and for one high-satisfaction dyad.
 
-***
-
 ## Overview
 
 Key variables in the `Main_Paxton_Dale-all_analyses.Rmd` files are `a_target_emotion` and `p_target_emotion`, which specify the categories of emotion states to be used in the plotting and computations. These lists are then used in source files:
@@ -16,8 +14,8 @@ Key variables in the `Main_Paxton_Dale-all_analyses.Rmd` files are `a_target_emo
 + `plot_drps_age.R`: Plots recurrence results by adolescent age
 + `plot_drps_satisfaction.R`: Plots recurrence results by dyad satisfaction score
 
-***
-
-## Viewing recommendation
+## Notes on running and viewing
 
 For best viewing in a *browser*, we recommend selecting the `Main_Paxton_Dale-all_analyses.md`, rather than the similarly named `.Rmd` file.  (Analyses should be run using the `.Rmd` file of the same name.)
+
+For those unfamiliar with R markdown, we recommend taking a look at <a href="http://rmarkdown.rstudio.com/" target="_blank">RStudio's introduction to R markdown</a> before attempting to run the `.Rmd` file.  (Be sure to download <a href="https://www.rstudio.com/" target="_blank">RStudio</a> first, if you do not already have it installed on your machine.)
